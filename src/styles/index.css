@@ -1,12 +1,40 @@
+body {
+    font-size: 21px;
+    background-color: lightcyan;
+}
 
-/* 
+.task {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    border : 1px solid;
+    border-color: #973A3A;
 
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
+}
 
-*/
+input, .task {
+    border: 2px solid #003366; 
+    box-shadow: 0px 4px 8px rgba(0, 51, 102, 0.3); 
+    border-radius: 8px; 
+    padding: 8px;
+    margin-bottom: 10px; 
+}
+
+
+button {
+    border: 1px solid #003366;
+    background-color: #f0f0f0;
+    color: #003366;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Hover == Pasar el mouse por encima  */
+button:hover {
+    background-color: #003366;
+    color: white;
+    box-shadow: 0px 4px 8px rgba(0, 51, 102, 0.5); 
+}
+
