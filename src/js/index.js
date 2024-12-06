@@ -7,8 +7,8 @@ import "../styles/index.css";
 
 //import your own components
 // import Home from "./component/home.jsx";
-import TodoList from "./views/TodoList";
+// import TodoList from "./views/TodoList";
+import Layout from "./Layout";
 
 //render your react application
-ReactDOM.createRoot(document.getElementById('app')).render(<TodoList/>);
-
+ReactDOM.createRoot(document.getElementById("app")).render(<Layout />);
