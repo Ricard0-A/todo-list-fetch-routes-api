@@ -1,16 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-// import Todos from "./Todos.jsx";
 
 const urlBase = "https://rickandmortyapi.com/api";
 
-//create your first component
 const RickAndMorty = () => {
   const [character, setCharacter] = useState([]);
 
   const getAllCharacter = async () => {
     try {
-      const response = await fetch(`${urlBase}/character`); // otro idioma
+      const response = await fetch(`${urlBase}/character`); 
       const data = await response.json();
 
       setCharacter(data.results);
@@ -52,7 +50,6 @@ const RickAndMorty = () => {
           ))}
         </div>
       </div>
-      {/* <Todos /> */}
     </>
   );
 };

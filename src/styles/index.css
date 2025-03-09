@@ -31,7 +31,6 @@ button {
     transition: all 0.3s ease;
 }
 
-/* Hover == Pasar el mouse por encima  */
 button:hover {
     background-color: #003366;
     color: white;

@@ -1,14 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-// CONTENIDO RELEVANTE DE MI COMPONENTE ↓
 
-// 1- Uso estrategico de Estados
-// 2- Spread Operator
-// 3- Destructuracion
-// 4- Condicionales ( Estrategicos )
-// 5- useEffeect
-// 6-Uso cuidadoso de los parametros de las funciones auxiliares
-// 7-Map para mostrar al instante contenido en funcion a la logica js
 
 const TodoList = () => {
   const initialTask = {
@@ -18,9 +10,9 @@ const TodoList = () => {
 
   const url = "https://playground.4geeks.com/todo";
 
-  const [task, setTask] = useState(initialTask); //Seteos y mas Seteos
-  const [taskList, setTaskList] = useState([]); //Seteos y mas Seteos
-  const [editing, setEditing] = useState(null); // Estado para saber qué tarea estoy editando
+  const [task, setTask] = useState(initialTask); 
+  const [taskList, setTaskList] = useState([]);  
+  const [editing, setEditing] = useState(null);   
 
   // Funcion que agrega lo que se escribe en el input y lo coloca en el useState Task
   const handleChange = ({ target }) => {
@@ -124,7 +116,6 @@ const TodoList = () => {
     }
   };
 
-  // Brecha entre la logica y lo visual, a traves del return!
   return (
     <>
       <div className="container">
@@ -144,7 +135,7 @@ const TodoList = () => {
             </form>
 
             {taskList.length <= 0 ? (
-              <div className="text-danger fs-4">No tienes tareas hechas!</div>
+              <div className="text-danger fs-4">You have no homework done!</div>
             ) : (
               taskList.map((unit) => (
                 <div key={unit.id} className="task pt-2">
@@ -159,7 +150,6 @@ const TodoList = () => {
                 </div>
               ))
             )}
-            {/* Ojito */}
             {editing && (
               <div>
                 <button onClick={saveEdit}>Guardar cambios</button>

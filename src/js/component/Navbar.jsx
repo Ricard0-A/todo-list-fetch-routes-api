@@ -1,7 +1,6 @@
 import React from "react";
-// Para los Routers no usemos <a>, usemos <Link> Importado
 import { Link, NavLink } from "react-router-dom";
-// Usamos NavLink en sustituto de Link para manejar el Estado Activo de un Nav Item
+
 const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">

@@ -6,24 +6,17 @@ import { useNavigate } from "react-router-dom";
 const Detail = () => {
   const [personDetail, setPersonDetail] = useState(null);
   const navigate = useNavigate()
-  // API Base URL
   const url = "https://rickandmortyapi.com/api/character/";
 
-  // Le damos uso al useParams para traer el id dinamico por visualmente
   const { theid } = useParams(); //Version destructurada (theid)
   // const params = useParams(); // Version Friendly (params.theid)
 
-  //Ahora hacemos el fetch para sacar datos del link url y de los id para llegar a
-  // los character/Id y sacar esos datos
   const getPersonDetail = async () => {
     try {
-      // Ves como usamos el theid
       const response = await fetch(`${url}${theid}`);
       const data = await response.json();
       setPersonDetail(data);
     } catch (error) {
-      // Ya sabes que si quieres una accion ante una respuesta 404, aqui no va el error
-      // por que 404 es una respuesta, asi que A los comerciales, que diga a los condicionales
       console.log("Se intento consultar la data, pero no hubo respuesta");
     }
   };
@@ -62,7 +55,6 @@ const Detail = () => {
                   
                 </div>
               </div>
-              {/* {personDetail?.name} */}
             </div>
           </div>
         </div>
@@ -73,18 +65,4 @@ const Detail = () => {
 
 export default Detail;
 
-// Anotes Importantes
 
-// {
-/* Debido a que React por origen pasa primero por el return y despues ejecuta useEffect 
-        // Person detail es null la primera vez, luego se vuelve a renderizar con useEffect y por eso 
-        // esta logica tan rara   */
-// }
-// Aqui estan los detalles del personaje {/*// Version 1   */}
-// {/* {personDetail ? personDetail.name : null}  */}
-// {/*// Version 2  */}
-// {/* {personDetail == null ? "" : personDetail.name}  */}
-// {/* Version 3 Exclusivo de React */}
-// {personDetail?.name}
-// {/* Esto ultimo quiere decir solo dame personDetail.name y en cualquier otro caso que sea undefined
-// y que no me crashee mi codigo  */}

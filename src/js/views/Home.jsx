@@ -1,6 +1,4 @@
 import React from "react";
-// import RickAndMorty from "./RickAndMorty";
-// import Navbar from "../component/Navbar";
 
 const Home = () => {
   const miniStyles = {
@@ -9,7 +7,7 @@ const Home = () => {
 
   return (
     <div>
-      <h1 className={miniStyles}>Continuara...</h1>
+      <h1 className={miniStyles}>Nothing over here...</h1>
     </div>
   );
 };
